@@ -205,7 +205,7 @@ const clearDB = async() => {
   let clearTagsInBooksWithoutFiles = await db.run('DELETE FROM booktogenre WHERE bookid NOT IN (SELECT book_id FROM files)');
   let clearTagsWithoutBooks = await db.run('DELETE FROM genres WHERE id NOT IN (SELECT genreid FROM booktogenre)');
   let clearBooksSettingsWithoutFiles = await db.run('DELETE FROM books_settings WHERE bookid NOT IN (SELECT book_id FROM files)');
-  let setAuthors = await db.run('UPDATE books_impl SET author = "Автор Неизвестен" WHERE author = ""');
+  let setAuthors = await db.run('UPDATE books_impl SET author = "" WHERE author = ""');
   let setProfile = await db.run('UPDATE books_settings SET profileid = 1 WHERE profileid IS NULL');
 
 }

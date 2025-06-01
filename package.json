@@ -1,6 +1,6 @@
 {
   "name": "PocketBook_Collection_Manager",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "An app to manage collections on PocketBook e-reader from your computer",
   "author": "anareaty",
   "dependencies": {
